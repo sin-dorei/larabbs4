@@ -9,7 +9,7 @@
                 class="card-img-top" alt="{{ $user->name }}">
             <div class="card-body">
                 <h5 class="card-title"><strong>个人简介</strong></h5>
-                <p class="card-text">活着</p>
+                <p class="card-text">{{ $user->introduction }}</p>
                 <p class="card-text">
                     <small class="text-muted">
                         注册于 {{ $user->created_at->diffForHumans() }}
