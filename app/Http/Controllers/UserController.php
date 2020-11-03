@@ -19,6 +19,8 @@ class UserController extends Controller
 
     public function update(UpdateUserPost $request, User $user)
     {
+        dd($request->avatar);
+
         $validated = $request->validated();
 
         $user->update($request->all());

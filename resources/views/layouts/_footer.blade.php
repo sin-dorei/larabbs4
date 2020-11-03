@@ -1,4 +1,4 @@
-<footer class="panel-footer" style="width: 100%; overflow: hidden;">
+<footer class="panel-footer fixed-bottom mb-4" style="width: 100%; overflow: hidden;">
     <div class="container">
         {{-- <div class="row footer-top" style="text-align: center;">
             <h1>Upon</h1>
