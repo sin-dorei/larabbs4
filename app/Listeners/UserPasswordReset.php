@@ -2,11 +2,11 @@
 
 namespace App\Listeners;
 
-use Illuminate\Auth\Events\Verified;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class LogVerifiedUser
+class UserPasswordReset
 {
     /**
      * Create the event listener.
@@ -21,12 +21,11 @@ class LogVerifiedUser
     /**
      * Handle the event.
      *
-     * @param  Verified  $event
+     * @param  PasswordReset  $event
      * @return void
      */
-    public function handle(Verified $event)
+    public function handle(PasswordReset $event)
     {
-        // 会话里闪存认证成功后的消息提醒
-        session()->flash('success', '邮箱验证成功 ^_^');
+        session()->flash('success', '密码修改成功，您已登录');
     }
 }
