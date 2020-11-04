@@ -29,6 +29,7 @@ class UpdateUserPost extends FormRequest
             'name' => ['required', 'alpha_dash', 'between:2,60', Rule::unique('users')->ignore(Auth::user())],
             'email' => ['required', 'email'],
             'introduction' => ['max:80'],
+            'avatar' => ['mimes:jpg,png,jpeg,gif', 'dimensions:min_width=208,min_height=208'],
         ];
     }
 
@@ -44,6 +45,8 @@ class UpdateUserPost extends FormRequest
             'name.alpha_dash' => '用户名只支持英文、数字、横杠和下划线',
             'name.between' => '用户名必须介于 2 - 60 个字符之间',
             'name.unique' => '用户名已被占用，请重新填写',
+            'avatar.mimes' => '不是图片',
+            'avatar.dimensions' => '图片不清晰'
         ];
     }
 }

@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-md-3">
         <div class="card">
-            <img src="http://qi6mcm0mn.hd-bkt.clouddn.com/images/23d8489a2165ab94a40b98cc0db3b5f8.jpeg"
+            <img src="{{ $user->avatar }}"
                 class="card-img-top" alt="{{ $user->name }}">
             <div class="card-body">
                 <h5 class="card-title"><strong>个人简介</strong></h5>

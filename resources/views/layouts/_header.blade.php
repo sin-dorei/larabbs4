@@ -33,7 +33,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="http://qi6mcm0mn.hd-bkt.clouddn.com/images/23d8489a2165ab94a40b98cc0db3b5f8.jpeg" class="img-fluid rounded-circle" width="30px" height="30px">
+                        <img src="{{ Auth::user()->avatar }}" class="img-fluid rounded-circle" width="30px" height="30px">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -64,9 +64,18 @@
                             <label for="" class="col-md-4 col-form-label text-md-right">头像</label>
                             <div class="col-md-6">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="avatar" name="avatar" onchange="showFilename(this.files[0])">
-                                    <label id="filename_label" class="custom-file-label" for="avatar" data-browse="点击上传">选择图片</label>
+                                    <input id="avatar" type="file" class="custom-file-input"
+                                        onchange="showFilename(this.files[0])" @error('avatar') is-invalid
+                                        @enderror" name="avatar">
+                                    <label id="filename_label" class="custom-file-label" for="avatar"
+                                        data-browse="点击上传">选择图片</label>
                                 </div>
+
+                                @error('avatar')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                         </div>
 
